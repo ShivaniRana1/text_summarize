@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import openai
 
-OPENAI_API_KEY= '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'
+OPENAI_API_KEY= 'Please Add your OpenAPI keys'
 openai.api_key = OPENAI_API_KEY
 
 
