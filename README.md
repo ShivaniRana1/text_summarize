@@ -2,7 +2,7 @@
 We use GPT3 language model to summarize the text. 
 Login to your openai and grab your OPEN_API_KEYS
 put your OPEN_API_KEYS in text_summarize/myProject/myApp/generate.py
-I have made an text summarizer web application using Django
+    I have made an text summarizer web application using Django
 
 Steps to run text_summarizer
 1) Set up virtual environment::
