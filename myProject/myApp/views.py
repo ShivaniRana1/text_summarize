@@ -34,11 +34,9 @@ def upload(request):
 def pdf_input(request):
     if request.method == 'POST':
         uploaded_file = request.FILES["file"]
-        print(uploaded_file.name)
         fs = FileSystemStorage()
         fs.save(uploaded_file.name,uploaded_file)
         docs = handle_uploaded_file(uploaded_file.name) 
-        print(docs)
         docs= generate(docs)
         return render(request,'pdf_input.html',{'docs':docs,'name':uploaded_file.name,'summary':docs["choices"][0]["text"]})  
 
@@ -58,7 +56,6 @@ def article_summary(request):
             for data in soup1.find_all("p"):
                 text += data.get_text()
             docs= generate(text)
-            print(docs)
             return render(request, 'article.html', {'form': form,'text':docs,'summary':docs["choices"][0]["text"]})
     else:
         form = NameForm()
