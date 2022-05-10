@@ -21,3 +21,7 @@ Steps to run text_summarizer
 
  Now You can use web application for Text Summarization
  
+You can see text summarization walkthrough video below link:
+It shows how to run application
+
+https://clipchamp.com/watch/3vmLcyxAU0r
