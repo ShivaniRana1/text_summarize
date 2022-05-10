@@ -26,8 +26,7 @@ def upload(request):
     
         if request.method == 'POST':
             input_text = request.POST.getlist('text')
-            data = generate(input_text)
-            print(data["choices"][0]["text"])
+            data = generate(input_text)     
             return render(request, 'upload.html', {'data': data,'summary':data["choices"][0]["text"],'real_text':input_text})
 
         return HttpResponseRedirect('/')
